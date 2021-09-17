@@ -106,4 +106,24 @@ public class KebunSafariController {
         }
 
     }
+    // http://localhost:8080/kebun-safari/update/id-kebun/{id}/alamat/{alamat}
+    @RequestMapping("/kebun-safari/update/id-kebun/{id}/alamat/{alamat}")
+    public String updateAlamatById(
+            @PathVariable("id") String idKebunSafari,
+            @PathVariable("alamat") String alamat,
+            Model model){
+        List<KebunSafariModel> listKebunSafari = kebunSafariService.getKebunSafariList();
+        KebunSafariModel kebunSafari = kebunSafariService.getKebunSafariByIdKebunSafari(idKebunSafari);
+        String alamatKebun = alamat;
+
+        for(int i=0; i<listKebunSafari.size(); i++){
+            if(listKebunSafari.get(i).getAlamat().equals(alamatKebun)){
+                return "ErrorCode";
+            }
+        }
+
+        kebunSafari.setAlamat(alamat);
+        model.addAttribute("kebunSafari", kebunSafari);
+        return "detail-kebun-safari";
+    }
 }
