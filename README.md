@@ -2,6 +2,48 @@
 ## Authors 
 * **<Nama BENITHO AHMAD SURYO>** - *<NPM 1906353630>* - *<Kelas A>*
 
+## Tutorial 3
+
+#### Pertanyaan 1: Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model (@AllArgsConstructor,  @NoArgsConstructor,  @Setter,  @Getter,  @Entity,  @Table)
+ - @AllArgsConstructor : menghasilkan constructor yang membutuhkan argumen untuk setiap field pada annotated class
+ - @NoArgsConstructor : menghasilkan constructor yang default dan tanpa parameter
+ - @Setter : untuk menghasilkan setter yang default secara otomatis
+ - @Getter : untuk menghasilkan getter yang default secara otomatis
+ - @Entity : untuk menghasilkan entity secara default dan otomatis
+ - @Table : untuk menghasilkan table dengan nama yang sesuai dengan yang diisi
+
+#### Pertanyaan 2: Pada class CabangDB, terdapat method findByNoCabang, apakah kegunaan dari method tersebut?
+Untuk mencari data cabang menggunakan nomor cabang yang diketahui
+
+#### Pertanyaan 3: Jelaskan  perbedaan  kegunaan  dari  anotasi  @JoinTable  dan  @JoinColumn
+@JoinTable akan menyimpan id kedua entity ke dalam table terpisah sedangkan @JoinColumn akan menyimpan id entity lain di column baru di table yang sama
+
+#### Pertanyaan 4: Pada class PegawaiModel, digunakan anotasi @JoinColumn pada atribut cabang, apa kegunaan dari name, referencedColumnName, dan nullable dalam anotasi tersebut? dan apa perbedaan  nullable  dan  penggunaan  anotasi  @NotNull
+name digunakan untuk membuat relasi pada noCabang table pegawai, sedangkan referencedColumnName digunakan untuk relasi pada noCabang table cabang. nullable menunjukkan variabel, parameter yang boleh bernilai null berdasarkan dengan isiannya, sedangkan @NotNull menunjukkan variabel, parameter yang tidak boleh bernilai null 
+
+#### Pertanyaan 5: Jelaskan  kegunaan  FetchType.LAZY,  CascadeType.ALL,  dan  FetchType.EAGER
+- FetchType.LAZY : fetch akan dilakukan jika hanya dibutuhkan saja
+- FetchType.EAGER : fetch akan langsung dilakukan
+- CascadeType.ALL : akan menyebarkan (cascade) ke semua EntityManager operations (PERSIST, REMOVE, REFRESH, MERGE, DETACH) ke relating entities
+
+## Tutorial 2
+
+#### Pertanyaan 1: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut  setelah  menjalankan  program: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung% 20Fasilkom&noTelepon=081xxx Apa yang terjadi? Jelaskan mengapa hal tersebut dapat  terjadi
+Akan terjadi error dikarenakan pada bagian view dari “add-kebun-safari" belum dibuat
+
+#### Pertanyaan 2: Menurut kamu anotasi @Autowired pada class Controller tersebut merupakan implementasi dari konsep apa? Dan jelaskan secara singkat cara kerja @Autowired  tersebut  dalam  konteks  service  dan  controller  yang  telah  kamu  buat
+Pada @Autowired di controller mengimplementasikan konsep @Autowired on Properties. Dimana @Autowired akan mengurangi kebutuhan untuk melakukan getter dan setter, dengan cara inject bean tersebut ke KebunSafariController bean dengan menggunakan @Autowired, setelah itu Spring meng-inject kebunSafariService ketika KebunSafariController dibuat
+
+#### Pertanyaan 3: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung% 20Fasilkom Apa  yang  terjadi?  Jelaskan  mengapa  hal tersebut  dapat  terjadi.
+Terjadinya error karena pada saat penambahan tidak terdapat informasi tentang nomor telepon
+
+#### Pertanyaan 4: Jika Papa APAP ingin melihat Kebun Safari dengan nama Papa APAP, link  apa  yang  harus  diakses?
+http://localhost:8080/kebun-safari/?id=1
+
+#### Pertanyaan 5: Tambahkan 1 contoh Kebun Safari lainnya sesukamu. Lalu cobalah untuk mengakses http://localhost:8080/ , apa yang akan ditampilkan? Sertakan juga bukti  screenshotmu.
+Akan menampilkan seluruh kebun safari
+link screenshoot : https://drive.google.com/drive/folders/1aogtC0S_hzAMzGSNqJ4o_JIe9etz4yFh?usp=sharing
+
 ## Tutorial 1
 ### What I have learned today(Masukkan pertanyaan yang diikuti jawaban di setiap nomor, contoh seperti dibawah. Andajuga boleh menambahkan catatan apapun di bagian ini)
 
@@ -26,22 +68,6 @@ Selain dengan pengembangan web, developer juga dapat mengembangkan aplikasi ente
 ### What I did not understand(tuliskan apa saja yang kurang Anda mengerti, Anda dapat men-_check_ apabila Andasudah mengerti dikemudian hari, dan tambahkan tulisan yang membuat Anda mengerti)
 - [x] Keterhubungan model dan controller
 
-## Tutorial 2
 
-#### Pertanyaan 1: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut  setelah  menjalankan  program: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung% 20Fasilkom&noTelepon=081xxx Apa yang terjadi? Jelaskan mengapa hal tersebut dapat  terjadi
-Akan terjadi error dikarenakan pada bagian view dari “add-kebun-safari" belum dibuat
-
-#### Pertanyaan 2: Menurut kamu anotasi @Autowired pada class Controller tersebut merupakan implementasi dari konsep apa? Dan jelaskan secara singkat cara kerja @Autowired  tersebut  dalam  konteks  service  dan  controller  yang  telah  kamu  buat
-Pada @Autowired di controller mengimplementasikan konsep @Autowired on Properties. Dimana @Autowired akan mengurangi kebutuhan untuk melakukan getter dan setter, dengan cara inject bean tersebut ke KebunSafariController bean dengan menggunakan @Autowired, setelah itu Spring meng-inject kebunSafariService ketika KebunSafariController dibuat
-
-#### Pertanyaan 3: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung% 20Fasilkom Apa  yang  terjadi?  Jelaskan  mengapa  hal tersebut  dapat  terjadi.
-Terjadinya error karena pada saat penambahan tidak terdapat informasi tentang nomor telepon
-
-#### Pertanyaan 4: Jika Papa APAP ingin melihat Kebun Safari dengan nama Papa APAP, link  apa  yang  harus  diakses?
-http://localhost:8080/kebun-safari/?id=1
-
-#### Pertanyaan 5: Tambahkan 1 contoh Kebun Safari lainnya sesukamu. Lalu cobalah untuk mengakses http://localhost:8080/ , apa yang akan ditampilkan? Sertakan juga bukti  screenshotmu.
-Akan menampilkan seluruh kebun safari
-link screenshoot : https://drive.google.com/drive/folders/1aogtC0S_hzAMzGSNqJ4o_JIe9etz4yFh?usp=sharing
 
 
