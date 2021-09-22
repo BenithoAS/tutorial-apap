@@ -24,4 +24,24 @@ Selain dengan pengembangan web, developer juga dapat mengembangkan aplikasi ente
 @RequestParam digunakan untuk extract query parameter sedangkan @PathVariable digunakan untuk mengextarct data yang langsung daru url. @RequestParam lebih baik digunakan untuk traditional web application dimana data lebih sering lewat query, dan pada @PathVariable lebih sesuai digunakan pada restful web services dimana url berisi values data\
 
 ### What I did not understand(tuliskan apa saja yang kurang Anda mengerti, Anda dapat men-_check_ apabila Andasudah mengerti dikemudian hari, dan tambahkan tulisan yang membuat Anda mengerti)
-- [ ] Keterhubungan model dan controller
+- [x] Keterhubungan model dan controller
+
+## Tutorial 2
+
+#### Pertanyaan 1: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut  setelah  menjalankan  program: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung% 20Fasilkom&noTelepon=081xxx Apa yang terjadi? Jelaskan mengapa hal tersebut dapat  terjadi
+Akan terjadi error dikarenakan pada bagian view dari “add-kebun-safari" belum dibuat
+
+#### Pertanyaan 2: Menurut kamu anotasi @Autowired pada class Controller tersebut merupakan implementasi dari konsep apa? Dan jelaskan secara singkat cara kerja @Autowired  tersebut  dalam  konteks  service  dan  controller  yang  telah  kamu  buat
+Pada @Autowired di controller mengimplementasikan konsep @Autowired on Properties. Dimana @Autowired akan mengurangi kebutuhan untuk melakukan getter dan setter, dengan cara inject bean tersebut ke KebunSafariController bean dengan menggunakan @Autowired, setelah itu Spring meng-inject kebunSafariService ketika KebunSafariController dibuat
+
+#### Pertanyaan 3: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung% 20Fasilkom Apa  yang  terjadi?  Jelaskan  mengapa  hal tersebut  dapat  terjadi.
+Terjadinya error karena pada saat penambahan tidak terdapat informasi tentang nomor telepon
+
+#### Pertanyaan 4: Jika Papa APAP ingin melihat Kebun Safari dengan nama Papa APAP, link  apa  yang  harus  diakses?
+http://localhost:8080/kebun-safari/?id=1
+
+#### Pertanyaan 5: Tambahkan 1 contoh Kebun Safari lainnya sesukamu. Lalu cobalah untuk mengakses http://localhost:8080/ , apa yang akan ditampilkan? Sertakan juga bukti  screenshotmu.
+Akan menampilkan seluruh kebun safari
+link screenshoot : https://drive.google.com/drive/folders/1aogtC0S_hzAMzGSNqJ4o_JIe9etz4yFh?usp=sharing
+
+
