@@ -2,6 +2,19 @@
 ## Authors 
 * **<Nama BENITHO AHMAD SURYO>** - *<NPM 1906353630>* - *<Kelas A>*
 
+## Tutorial 4
+
+#### Pertanyaan 1: Jelaskan perbedaan th:include dan th:replace!
+ - th:include: fragment/konten akan masuk ke dalam objek html
+ - th:replace: fragment/konten akan menggantikan posisi objek html
+
+#### Pertanyaan 2: Jelaskan  apa  fungsi  dari  th:object!
+th:object berfungsi untuk menginisisasi objek yang kemudian data yg dikirim dapat diterima berdasarkan tabel data yang bersesuaian oleh spring
+
+#### Pertanyaan 3: Jelaskan  perbedaan  dari  *  dan  $  pada  saat  penggunaan  th:object!  Kapan  harus  dipakai?
+- "*" digunakan untuk mengambil atribut dari data yang dipilih sebelumnya menggunakan "$"
+- "$" digunakan untuk inisiasi variable yg dikirim oelh spring controller
+
 ## Tutorial 3
 
 #### Pertanyaan 1: Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model (@AllArgsConstructor,  @NoArgsConstructor,  @Setter,  @Getter,  @Entity,  @Table)
