@@ -2,6 +2,22 @@
 ## Authors 
 * **<Nama BENITHO AHMAD SURYO>** - *<NPM 1906353630>* - *<Kelas A>*
 
+## Tutorial 5
+
+#### Pertanyaan 1: Apa itu Postman? Apa kegunaannya?
+Postman merupakan platform API untuk membuat dan menggunakan API, dengan fitur API repository, tools, Intelligence, workspaces, dan integrations. 
+
+#### Pertanyaan 2: Jelaskan fungsi dari anotasi @JsonIgnoreProperties dan @JsonProperty.
+- @JsonIgnoreProperties digunakan untuk class dengan menandai atribut/properti yang akan diabaikan/ignore
+- @JsonProperty digunakan untuk memetakan nama properti dengan JSON key pada serialization atau menunjukkan property name di JSON
+
+#### Pertanyaan 3: Apa kegunaan atribut WebClient?
+WebClient merupakan bagian dari Spring's  web reactive framework yang digunakan untuk melakukan HTTP request dan  digunakan untuk membangun aplikasi yang reactive.
+
+#### Pertanyaan 4: Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
+- ResponseEntity merupakan entitas yang ada pada HTTP yaitu body, header, dan status yang digunakan untuk mengontrol respon HTTP. 
+- BindingResult merupakan objek dari Spring yang menyimpan hasil validasi dan berisi error yang mungkin terjadi.
+
 ## Tutorial 4
 
 #### Pertanyaan 1: Jelaskan perbedaan th:include dan th:replace!
