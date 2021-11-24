@@ -2,6 +2,24 @@
 ## Authors 
 * **<Nama BENITHO AHMAD SURYO>** - *<NPM 1906353630>* - *<Kelas A>*
 
+## Tutorial 6
+
+#### Pertanyaan 1: Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
+- Otentikasi adalah proses untuk mengetahui siapa yang sedang mengakses aplikasi, diimplementasikan dalam class WebSecurityConfig, UserDetailsServiceImpl, dan data terkait user disimpan pada model
+- Otorisasi adalah proses untuk menyesuaikan apa saja otorisasi yang bisa diperoleh suatu role, diimplementasikan dalam class WebSecurityConfig, dan pada bagian html
+
+#### Pertanyaan 2: Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerja dan tujuannya
+BCryptPasswordEncoder adalah implementasi dari algoritma BCrypt yang berfungsi dalam hashing password. Cara kerjanya dengan secara otomatis menghasilkan dan menggunakan random salt untuk menghitung hash, dengan tujuan untuk mendapatkan output yang berbeda.
+
+#### Pertanyaan 3: Apakah penyimpanan password sebaiknya menggunakan encryption atau hashing? Mengapa demikian?
+Menggunakan hashing karena ketika password menggunakan enkripsi, pasword akan memungkinkan untuk di-dekripsi, dan jika menggunakan hashing, hasil hash tidak dapat didekripsi.
+
+#### Pertanyaan 4: Jelaskan secara singkat apa itu UUID beserta penggunaannya
+UUID (Universally unique identifier) adalah proses yang dapat menghasilkan unique id secara universal, sehingga sangat kecil untuk mendapatkan id yang sama dalam satu sistem
+
+#### Pertanyaan 5: Apa kegunaan class UserDetailsServiceImpl.java? Mengapa harus ada class tersebut padahal kita sudah memiliki class UserRoleServiceImpl.java?
+Class UserDetailsServiceImpl.java berguna untuk retrieving data dari database mengenai data user, lalu akan digunakan untuk proses otentikasi
+
 ## Tutorial 5
 
 #### Pertanyaan 1: Apa itu Postman? Apa kegunaannya?

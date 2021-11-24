@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>Emsidi</title>
@@ -41,10 +41,10 @@
                 <a class="btn btn-primary" th:href="@{/cabang/view(noCabang=${cabang.noCabang})}">Lihat Detail
                     Cabang</a>
             </td>
-            <td>
+            <td sec:authorize ="hasAuthority('Manajer')">
                 <a class="btn btn-primary" th:href="@{/cabang/update/} + ${cabang.noCabang}">Update Cabang</a>
             </td>
-            <td>
+            <td sec:authorize ="hasAuthority('Manajer')">
                 <a class="btn btn-primary" th:href="@{/cabang/delete/} + ${cabang.noCabang}">Delete Cabang</a>
             </td>
         </tbody>
