@@ -2,6 +2,36 @@
 ## Authors 
 * **<Nama BENITHO AHMAD SURYO>** - *<NPM 1906353630>* - *<Kelas A>*
 
+## Tutorial 7
+
+#### Pertanyaan 1 : Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
+Link Screenshoot (https://drive.google.com/drive/folders/1OKJs-uaInVk6I03Y1MeK3wbRgB3qDDRI?usp=sharing)
+- Membuat fungsi baru bernama handleDeleteItemToCart, dimana berisi newItems untuk item yang berada di cart, delItem untuk item yang akan dipilih, lalu item yang dipilih akan dihapus dan setState({cartItems:newItems}) untuk mengubah kembali item yang ada di cart
+
+- Menambahkan isi balance pada handleAddItemToCart dan handleDeleteItemToCart lalu menambahkan newItemPrice untuk harga dari barang yang baru dipilih dan delItemPrice untuk harga item yang akan dihapus, lalu pada newBalance di menambah barang, balance akan dikurangi newItemPrice dan di menghapus barang, balance akan ditambah delItemPrice. Setelah itu setState({ balance: newBalance }) untuk mengupdate dari total balance yang ada
+
+- Menambahkan if(newBalance < 0) pada handleAddItemToCart ketika balance akan menjadi minus pada saat menambahkan barang, dan akan mengeluarkan alert yang berisi ("Balance not sufficient!")
+
+#### Pertanyaan 2 : Menurut pemahaman kamu selama pengerjaan tutorial ini, apa perbedaan antara state dan props?
+
+Perbedaan utama antara props dan state adalah, pada state bersifat internal dan dikendalikan oleh komponen itu sendiri sementara props bersifat eksternal dan dikendalikan oleh apa pun yang membuat komponen tersebut.
+
+#### pertanyaan 3 : Menurut kamu, apakah sebaiknya kita menggunakan component (e.g. List, Item) dalam React?  sebutkan alasannya.
+
+Dikarenakan ketika memakai komponen pada react akan memudahkan untuk membuat UI yang akan dipakai, karena bersifat independen dan reusable sehingga mempercepat dalam pembuatan proyek
+
+#### Pertanyaan 4 : Apa perbedaan class component dan functional component?
+
+- Class Components mengharuskan untuk meng-extend dari React, dan harus memiliki method render() yang mengembalikan HTML
+
+- Functional component hanyalah fungsi JavaScript biasa yang menerima props sebagai argumen dan mengembalikan React element.
+
+#### Pertanyaan 5 : Dalam react, apakah perbedaan component dan element?
+
+- React component adalah sebuah template yang berupa fungsi atau kelas (dengan fungsi render).
+
+- React Elements adalah apa yang di-return dari react component, dimana objek yang secara virtual menggambarkan DOM nodes yang diwakili oleh component.
+
 ## Tutorial 6
 
 #### Pertanyaan 1: Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
