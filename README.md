@@ -2,6 +2,25 @@
 ## Authors 
 * **<Nama BENITHO AHMAD SURYO>** - *<NPM 1906353630>* - *<Kelas A>*
 
+## Tutorial 8
+Link Screenshoot (https://drive.google.com/drive/folders/1Q32M_KNxoU4Qsfpei9GnIYI5b6SNQ6GP?usp=sharing)
+#### Pertanyaan 1 : Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa  kalian melakukan langkah - langkah tersebut?
+
+Dengan meng-aasign nilai defaultnya, agar ketika form ingin diisi, form tidak terisi dengan nilai yang sebelumnya dimasukkan.
+
+#### Pertanyaan 2 : Jelaskan fungsi dari async dan await!
+- Async, mereturn promise yang digunakan untuk event berikutnya setelah promise di-fulfill
+- Await, memberhentikan sementara fungdi async yang sedang berjalan, hingga promise di-fulfill, selanjutnya akan melanjutkan fungsi aync 
+
+#### Pertanyaan 3 : Masukkan jawaban dari Screenshot yang diperintahkan di halaman 9 pada Component Lifecycle pada pertanyaan ini.
+
+#### Pertanyaan 4 : Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount.
+- componentDidMount, fungsi dipanggil ketika component di-create dan di-insert pada DOM, fungsi digunakan ketika component baru diakses, yang selanjutnya akan melakukan ajax call pada api
+- shouldComponentUpdate, fungsi dipanggil ketika component mengalami update pada state/props, fungsi digunakan ketika component melakukan perubahan data
+- componentDidUpdate, fungsi dipanggil ketika sesudah/sebelum component di-re-render, fungsi digunakan ketika component melakukan manual work yang di luar react
+- componentWillReceiveProps, fungsi dipanggil ketika state/props diubah di component, fungsi digunakan ketika sebelum terjadinya recive props pada component
+- componentWillUnmount, fungsi dipanggil ketika component dihapus pada DOM, fungsi digunakan ketika akan menghapus data pada DOM
+
 ## Tutorial 7
 
 #### Pertanyaan 1 : Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
